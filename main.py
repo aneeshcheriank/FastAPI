@@ -3,16 +3,12 @@ import uvicorn
 
 app = FastAPI()
 
-app.get("/")
-
-
+@app.get("/")
 async def root():
     return {"message": "Hello Duke"}
 
 
-app.get("/add/{num1}/{num2}")
-
-
+@app.get("/add/{num1}/{num2}")
 async def add(num1: int, num2: int):
     """Add two numbers tougher"""
 
